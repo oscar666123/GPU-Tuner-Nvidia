@@ -375,6 +375,31 @@ input[type="range"] {
   color: #cbd7e6;
 }
 
+.safety-guidance {
+  display: grid;
+  gap: 18px;
+}
+
+.safety-guidance h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.safety-guidance p,
+.safety-guidance ul {
+  margin: 0;
+  color: #cbd7e6;
+  line-height: 1.55;
+}
+
+.safety-guidance ul {
+  padding-left: 20px;
+}
+
+.safety-guidance li + li {
+  margin-top: 6px;
+}
+
 .two-column {
   display: grid;
   grid-template-columns: 360px minmax(0, 1fr);

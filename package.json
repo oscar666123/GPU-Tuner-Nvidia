@@ -1,6 +1,6 @@
 {
   "name": "gpu-tuner",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "author": "oscar666123",
   "private": true,
   "type": "module",

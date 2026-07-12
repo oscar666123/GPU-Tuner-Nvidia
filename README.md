@@ -53,7 +53,15 @@ src-tauri\target\release\bundle\msi
 
 ## Safety
 
-GPU tuning can cause instability, driver resets, or crashes. Start with monitoring, then apply small changes one setting at a time. NVIDIA driver support varies by GPU and driver version.
+Administrator privileges authorize tuning and reset commands sent to the NVIDIA driver. Telemetry monitoring remains read-only.
+
+Driver writes include:
+
+- **Apply:** writes only the checked Power Limit, Core Clock, Memory Clock, Core Offset, and Memory Offset settings.
+- **Restore All Defaults:** resets the power limit, locked clocks, and clock offsets for the selected GPU.
+- Unsupported values may be rejected or rounded to a frequency step supported by the GPU and driver.
+
+GPU tuning can cause instability, driver resets, application crashes, or a temporary black screen. Apply small changes, verify stability after each change, and use **Restore All Defaults** after unstable behavior.
 
 ## Limits
 

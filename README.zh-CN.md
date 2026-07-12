@@ -53,7 +53,15 @@ src-tauri\target\release\bundle\msi
 
 ## 安全说明
 
-GPU 调参可能导致系统不稳定、驱动重启或崩溃。建议先监控，再逐项小幅调整。NVIDIA 驱动是否接受设置取决于 GPU 和驱动版本。
+管理员权限用于授权发送至 NVIDIA 驱动的调参和重置命令。遥测监控保持只读。
+
+驱动写入范围：
+
+- **Apply：**只写入已勾选的 Power Limit、核心定频、显存定频、核心 Offset 和显存 Offset。
+- **Restore All Defaults：**恢复所选 GPU 的功耗限制、锁定频率和频率偏移默认值。
+- GPU 或驱动可能拒绝不支持的值，也可能将频率调整到受支持的档位。
+
+GPU 调参可能导致系统不稳定、驱动重启、应用崩溃或短暂黑屏。每次小幅调整并验证稳定性；出现异常后使用 **Restore All Defaults** 恢复默认设置。
 
 ## 限制
 

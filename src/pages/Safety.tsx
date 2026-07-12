@@ -72,6 +72,25 @@ export default function Safety({ gpuIndex, threshold, onThresholdChange, onNotif
           </button>
         </div>
       </section>
+
+      <section className="panel safety-guidance">
+        <div>
+          <h3>Administrator Access</h3>
+          <p>Administrator privileges authorize tuning and reset commands sent to the NVIDIA driver. Monitoring remains read-only.</p>
+        </div>
+        <div>
+          <h3>Driver Write Scope</h3>
+          <ul>
+            <li>Apply writes only the checked Power Limit, Core Clock, Memory Clock, Core Offset, and Memory Offset settings.</li>
+            <li>Restore All Defaults resets the power limit, locked clocks, and clock offsets for the selected GPU.</li>
+            <li>Unsupported values can be rejected or rounded to a frequency step supported by the GPU and driver.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Risk and Recovery</h3>
+          <p>Tuning can cause instability, driver resets, application crashes, or a temporary black screen. Apply small changes, verify stability, and use Restore All Defaults after unstable behavior.</p>
+        </div>
+      </section>
     </div>
   );
 }
